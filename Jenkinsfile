@@ -38,7 +38,7 @@ pipeline {
             agent any
             steps {
                 sh """
-                docker build -t ${env.IMAGE_TAG} 
+                docker build -t ${env.IMAGE_TAG} .
                 docker push ${env.IMAGE_TAG}
                 """
             }
